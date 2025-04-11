@@ -6,14 +6,14 @@ To start extracting URLs, simply send /app. 📲
 <blockquote><i>🔓 I support over 100+ apps for seamless URL extraction.
 📥 After extracting the URLs, you can easily download the videos/pdfs using any of my Uploader Bot.⏬</blockquote></i>
 
-<u>For any queries, contact [Admin](https://t.me/Rolexonee)</u></b>
+<u>For any queries, contact [Admin](https://t.me/Manpreetkaur111)</u></b>
 """
 
 APP = """
 <b><i>👋 Hey there! I'm your Txt Extractor bot!🤖</i>
 
 
-<blockquote>🚨 If you encounter any issues or can't extract any text file, just contact your [Admin](https://t.me/Rolexonee).
+<blockquote>🚨 If you encounter any issues or can't extract any text file, just contact your [Admin](https://t.me/Manpreetkaur111).
 
 💬 Got an app you'd like to add? Feel free to reach out to me anytime!</blockquote>
 
@@ -70,8 +70,8 @@ L = """<i><b>👑====LEGEND PLAN USER====👑</i>
 🚀You get seprate Non-Drm Bot</b>
 """
 
-auth = """
-<b>🎉 Congrats [{}](tg://openmessage?user_id={8130693100}) for gaining access to Txt Extractor Bot! 🎉
+auth = 6376631545"""
+<b>🎉 Congrats [{}](tg://openmessage?user_id={6376631545}) for gaining access to Txt Extractor Bot! 🎉
 
 
 <i>Your have access to the bot as a:</i>
@@ -81,5 +81,5 @@ auth = """
 <u><i>🚀Enjoy your access for {} days!</u></i>
 
 
-If you need any assistance, feel free to contact [Admin](https://t.me/Rolexonee)</b>
+If you need any assistance, feel free to contact [Admin](https://t.me/Manpreetkaur111)</b>
 """
