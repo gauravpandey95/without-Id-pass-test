@@ -1,37 +1,11 @@
-# Use a Python 3.9.6 Alpine base image
-FROM python:3.9.6-alpine3.14
-
-# Set the working directory
+FROM python:3.12.3
 WORKDIR /app
-
-# Copy all files from the current directory to the container's /app directory
 COPY . .
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Install necessary dependencies
-RUN apk add --no-cache \
-    gcc \
-    libffi-dev \
-    musl-dev \
-    ffmpeg \
-    aria2 \
-    make \
-    g++ \
-    cmake
-
-# Install Bento4
-RUN wget -q https://github.com/axiomatic-systems/Bento4/archive/v1.6.0-639.zip && \
-    unzip v1.6.0-639.zip && \
-    cd Bento4-1.6.0-639 && \
-    mkdir build && \
-    cd build && \
-    cmake .. && \
-    make -j$(nproc) && \
-    cp mp4decrypt /usr/local/bin/ &&\
-    cd ../.. && \
-    rm -rf Bento4-1.6.0-639 v1.6.0-639.zip
-
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Set the command to run the application
-CMD ["sh", "-c", "gunicorn app:app & python3 main.py"]
+RUN python serverV3.py
+CMD gunicorn app:app & python3 main.py
